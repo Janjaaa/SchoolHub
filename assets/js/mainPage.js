@@ -364,3 +364,9 @@ onAuthStateChanged(auth, user => {
         }, 500)
     }
 })
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(function () {
+        console.log('Service Worker is registered!')
+    })
+}
