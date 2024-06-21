@@ -1,0 +1,162 @@
+@import url('/assets/css/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    margin: 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#loginRegistro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#buttonAlternate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+#buttonLogin,
+#buttonSignup {
+    width: 156px;
+    height: 38px;
+
+    border: none;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#buttonLogin {
+    border-radius: 30px 0px 0px 30px;
+    background-color: var(--secondaryGreen);
+    color: #fff;
+}
+#buttonSignup {
+    border-radius: 0px 30px 30px 0px;
+    background-color: var(--primaryGreen);
+}
+#loginUser {
+    visibility: hidden;
+}
+#loginUser,
+#registraUser {
+    display: flex;
+    margin: 24px;
+}
+input {
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.inputWrapper label {
+    display: block;
+    margin-top: 32px;
+}
+.inputWrapper {
+    display: flex;
+    width: 342px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+}
+
+.inputWrapper input {
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid rgba(9, 9, 9, 0.6);
+}
+#fname {
+    width: 230px;
+}
+#age {
+    width: 58px;
+}
+#email,
+#password {
+    width: 312px;
+}
+#verSenha {
+    width: 32px;
+    height: 20px;
+    border: none;
+    position: absolute;
+    bottom: 425px;
+    right: 32px;
+}
+
+#faculdade {
+    width: 136px;
+}
+#curso {
+    width: 140px;
+}
+
+.buttonSubmit {
+    margin-top: 48px;
+    width: 312px;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--secondaryGreen);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.bi,
+.bi-eye-slash {
+    font-size: 1.3em;
+}
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+    display: none;
+}
+#registraUser {
+    visibility: visible;
+}
+.registro {
+    position: absolute;
+    justify-content: center;
+    top: 120px;
+}
+#emailLogin,
+#passwordLogin {
+    width: 312px;
+}
+#verSenha2 {
+    position: absolute;
+    top: 172px;
+    right: 15px;
+}
+
+.googleButtons {
+    background: none;
+    border: none;
+    margin-top: 28px;
+}
+.logoSH {
+    width: 148px;
+    height: 29px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 14px;
+}
+
+#login {
+    margin-top: 257px;
+}

@@ -1,0 +1,79 @@
+@import url('/assets/css/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.navbar {
+    background-color: var(--navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+.principalIcon {
+    overflow: visible;
+    margin-bottom: 28px;
+}
+
+.topbar {
+    display: flex;
+    margin-top: 19px;
+    margin-left: 24px;
+    margin-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+#miniProfilePic {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+#calendarHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    align-items: flex-start;
+    margin-bottom: 150px;
+}
+#calendar {
+    width: 370px;
+    font-family: Inter !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.fc-button {
+    background-color: var(--primaryGreen) !important;
+}
+.fc-button-active {
+    background-color: var(--secondaryGreen) !important;
+}
+.fc-col-header {
+    background-color: var(--primaryGreen) !important;
+    color: #fff;
+}
+.fc-event-title.fc-sticky {
+    height: 60px !important;
+    white-space: pre-wrap !important;
+    background-color: var(--yellow);
+}
+.fc-event-title-container {
+    background-color: var(--yellow);
+}
+.entregue {
+    background-color: var(--secondaryGreen);
+}

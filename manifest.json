@@ -1,0 +1,51 @@
+{
+    "theme_color": "#83D4A9",
+    "background_color": "#FFF",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/index.html",
+    "name": "SchoolHub",
+    "short_name": "SchoolHub",
+    "description": "Sua  Organiza\u00e7\u00e3o,  Nossa aplica\u00e7\u00e3o",
+    "icons": [
+        {
+            "src": "/manifest/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/manifest/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/manifest/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/manifest/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots":[
+
+            {
+                "src": "/manifest/scrs1.png",
+                "type": "image/png",
+                "sizes": "392x842",
+                "form_factor": "narrow"
+            },
+            {
+                "src": "/manifest/scrs2.png",
+                "type": "image/png",
+                "sizes": "1871x955",
+                "form_factor": "wide"
+            }
+            
+        ],
+        "permissions": [
+            "webRequest"
+        ]
+}

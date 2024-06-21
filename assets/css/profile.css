@@ -1,0 +1,202 @@
+@import url('/assets/css/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+#profileInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#goback {
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    left: 24px;
+    top: 40px;
+}
+.accountInfo {
+    width: 211px;
+    height: 44px;
+    background-color: var(--secondaryGreen);
+    border: none;
+    border-radius: 72px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+#profilePic {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+.profilePicHolder {
+    border: none;
+    background-color: #fff;
+}
+#profileData {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.inputWrapper {
+    display: flex;
+    width: 342px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+}
+.inputWrapper label {
+    display: block;
+    margin-top: 32px;
+}
+#fname,
+#age,
+#curso,
+#faculdade {
+    width: 148px;
+    height: 44px;
+}
+
+#email {
+    width: 312px;
+    height: 44px;
+}
+
+.decorativeButtons {
+    background-color: var(--secondaryGreen);
+    border-radius: 72px;
+    border: none;
+    margin-top: 12px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+}
+#buttonsAccControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.controlButtons {
+    width: 312px;
+    height: 46px;
+    border-radius: 32px;
+    margin-top: 20px;
+    border: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+}
+#logOut {
+    background-color: var(--yellow);
+}
+#deleteAcc {
+    background-color: var(--orange);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~MODAL~~~~~~~~~~~~~~~~*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#fotoAmpliada {
+    width: 244px;
+    height: 244px;
+    margin: 16px;
+    border: 2px solid var(--secondaryGreen);
+}
+
+#upload {
+    margin-top: 48px;
+    width: 45%;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--secondaryGreen);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#closeModal {
+    margin-top: 48px;
+    width: 45%;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--orange);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.buttonsModal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/assets/css/login.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <title>SchoolHub</title>
+    </head>
+    <body>
+        <div id="loginRegistro">
+            <img
+                class="logoSH"
+                src="./images/schoolhub.png"
+                alt="School Hub logo"
+            />
+            <div id="buttonAlternate">
+                <button id="buttonLogin">Login</button>
+                <button id="buttonSignup">Registar</button>
+            </div>
+            <div id="loginUser">
+                <form class="inputWrapper">
+                    <div>
+                        <label for="fname">Nome de Usuário:</label>
+                        <input type="text" id="fname" name="fname" />
+                    </div>
+                    <div>
+                        <label for="age">Idade:</label>
+                        <input type="number" id="age" name="age" />
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" />
+                        <i class="bi bi-eye-slash" id="verSenha"></i>
+                    </div>
+                    <div>
+                        <label for="faculdade">Faculdade:</label>
+                        <input type="text" id="faculdade" name="faculdade" />
+                    </div>
+                    <div>
+                        <label for="curso">Curso:</label>
+                        <input type="text" id="curso" name="Curso" />
+                    </div>
+                    <button id="signUp" class="buttonSubmit" type="submit">
+                        Concluir
+                    </button>
+                    <img src="./images/ou.png" alt="" />
+                    <button id="googleSignup" class="googleButtons">
+                        <img
+                            src="./images/signinGoogle.png"
+                            alt="Registar com o Google"
+                        />
+                    </button>
+                </form>
+            </div>
+            <div id="registraUser">
+                <form class="inputWrapper registro">
+                    <div>
+                        <label for="emailLogin">E-mail:</label>
+                        <input type="email" id="emailLogin" name="emailLogin" />
+                    </div>
+                    <div>
+                        <label for="passwordLogin">Password:</label>
+                        <input
+                            type="password"
+                            id="passwordLogin"
+                            name="passwordLogin"
+                        />
+                        <i class="bi bi-eye-slash" id="verSenha2"></i>
+                    </div>
+                    <button id="login" class="buttonSubmit" type="submit">
+                        Concluir
+                    </button>
+                    <img src="./images/ou.png" alt="" />
+                    <button id="googleSignin" class="googleButtons">
+                        <img
+                            src="./images/loginGoogle.png"
+                            alt="Login com a conta google"
+                        />
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="/assets/js/login.js"></script>
+    </body>
+</html>

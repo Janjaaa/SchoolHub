@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/googleCompleteInfo.css" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>SchoolHub</title>
+    </head>
+    <body>
+        <div class="topbar">
+            <img src="./images/schoolhub.png" alt="" />
+            <a href="/profile.html" class="profileIcon"
+                ><img id="miniProfilePic" src="./images/profileIcon.png" alt=""
+            /></a>
+        </div>
+
+        <div class="inputWrapper">
+            <div>
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" />
+            </div>
+            <div>
+                <label for="faculdade">Faculdade:</label>
+                <input type="text" id="faculdade" name="faculdade" />
+            </div>
+            <div>
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" name="Curso" />
+            </div>
+            <button id="sendCompleteInfo" type="submit">Concluir</button>
+        </div>
+
+        <script type="module" src="./assets/js/googleCompleteInfo.js"></script>
+    </body>
+</html>

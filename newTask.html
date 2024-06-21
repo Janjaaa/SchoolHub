@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/newTask.css" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>SchoolHub</title>
+    </head>
+    <body>
+        <div class="topbar">
+            <img src="./images/schoolhub.png" alt="" />
+            <a href="/profile.html" class="profileIcon"
+                ><img id="miniProfilePic" src="./images/profileIcon.png" alt=""
+            /></a>
+        </div>
+        <form class="inputWrapper registro">
+            <h1 class="title">Nova task</h1>
+            <div>
+                <label for="cadeira">Cadeira:</label>
+                <select name="cadeira" id="cadeira" required>
+                    <option value="default">Escolha uma cadeira</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="nome">Nome da tarefa:</label>
+                <input type="text" id="nome" name="nome" required />
+            </div>
+            <div>
+                <label for="date">Data de entrega:</label>
+                <input type="date" id="date" name="date" required />
+            </div>
+        </form>
+        <div class="buttonsSendCancel">
+            <button id="cancel">Cancelar</button>
+            <button id="send" type="submit">Guardar</button>
+        </div>
+
+        <script type="module" src="./assets/js/newTask.js"></script>
+    </body>
+</html>

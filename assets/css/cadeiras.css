@@ -1,0 +1,247 @@
+@import url('/assets/css/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.navbar {
+    background-color: var(--navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+.principalIcon {
+    overflow: visible;
+    margin-bottom: 28px;
+}
+#topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+#searchTab {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--navbar);
+    margin-top: 12px;
+    width: 312px;
+    height: 44px;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+#searchTab input:focus {
+    outline: none;
+}
+#search {
+    align-self: flex-end;
+    border: none;
+    background-color: #ffffff;
+}
+#searchBar {
+    border: none;
+
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#criarCadeira {
+    margin-top: 24px;
+    width: 312px;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--secondaryGreen);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~MODAL~~~~~~~~~~~~~~~~*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonsModal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 312px;
+}
+#complete {
+    margin-top: 48px;
+    width: 45%;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--secondaryGreen);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#closeModal {
+    margin-top: 48px;
+    width: 45%;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--orange);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+input {
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.inputWrapper label {
+    display: block;
+    margin-top: 32px;
+    margin: 12px;
+}
+.inputWrapper {
+    margin-top: 32px;
+    width: 336px;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inputWrapper input {
+    height: 50px;
+    width: 300px;
+    margin: 12px;
+    border: none;
+    border-bottom: 2px solid rgba(9, 9, 9, 0.6);
+}
+
+#title {
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 12px;
+    position: fixed;
+    top: 80px;
+}
+#cadeiras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cadeira {
+    width: 311px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: var(--primaryGreen);
+    margin-bottom: 12px;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: grid;
+    position: relative;
+    justify-content: space-between;
+}
+
+.nomeCadeira {
+    align-self: center;
+    justify-self: end;
+    align-content: end;
+
+    text-align: center;
+    margin-left: 100px;
+
+    width: 211px;
+}
+.detail {
+    background-color: var(--secondaryGreen);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 0px 0px 10px;
+    position: absolute;
+    left: 0px;
+}

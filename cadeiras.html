@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/cadeiras.css" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>SchoolHub</title>
+    </head>
+    <body>
+        <div id="topbar">
+            <div id="searchTab">
+                <input
+                    type="text"
+                    name="searchBar"
+                    placeholder="Pesquisa"
+                    id="searchBar"
+                />
+                <button id="search">
+                    <img src="./images/Search.png" alt="Pesquisar" />
+                </button>
+            </div>
+            <button id="criarCadeira">Nova cadeira</button>
+        </div>
+
+        <div id="cadeiras"></div>
+
+        <div class="navbar">
+            <a href="./calendar.html"
+                ><img src="./images/calendario.png" alt=""
+            /></a>
+            <a href="./cadeiras.html" class="active"
+                ><img
+                    class="principalIcon"
+                    src="./images/disciplinasMain.png"
+                    alt=""
+            /></a>
+            <a href="./mainPage.html"
+                ><img src="./images/HomeSecondary.png" alt=""
+            /></a>
+        </div>
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div class="inputWrapper">
+                    <h1 id="title">Criar cadeira</h1>
+                    <div>
+                        <label for="nomeCadeira">Nome da cadeira:</label>
+                        <input
+                            type="text"
+                            id="nomeCadeira"
+                            name="nomeCadeira"
+                        />
+                    </div>
+                    <div>
+                        <label for="abreviacaoCadeira">Abreviação:</label>
+                        <input
+                            type="text"
+                            id="abreviacaoCadeira"
+                            name="abreviacaoCadeira"
+                        />
+                    </div>
+                </div>
+
+                <div class="buttonsModal">
+                    <button id="closeModal">Cancelar</button>
+                    <button id="complete" type="submit">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./assets/js/cadeiras.js"></script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+@import url('/assets/css/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.topbar {
+    display: flex;
+    margin-top: 19px;
+    margin-left: 24px;
+    margin-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.inputWrapper label {
+    display: block;
+    margin-top: 32px;
+}
+.inputWrapper {
+    margin-top: 32px;
+    margin-left: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 342px;
+    align-content: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inputWrapper input {
+    height: 50px;
+    width: 312px;
+    border: none;
+    border-bottom: 2px solid rgba(9, 9, 9, 0.6);
+}
+#sendCompleteInfo {
+    margin-top: 48px;
+    width: 312px;
+    height: 46px;
+    padding: 12px 4px;
+    border-radius: 32px;
+    border: none;
+    margin-bottom: 20px;
+
+    background-color: var(--secondaryGreen);
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-top: 257px;
+    justify-self: center;
+}
+#miniProfilePic {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}

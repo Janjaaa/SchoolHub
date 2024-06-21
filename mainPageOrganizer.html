@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/mainPageOrganizer.css" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>SchoolHub</title>
+    </head>
+    <body>
+        <div class="topbar">
+            <img src="./images/schoolhub.png" alt="" />
+            <a href="/profile.html" class="profileIcon"
+                ><img id="miniProfilePic" src="./images/profileIcon.png" alt=""
+            /></a>
+        </div>
+        <div id="fullPage">
+            <div id="conteudo">
+                <div id="searchTab">
+                    <input
+                        type="text"
+                        name="searchBar"
+                        placeholder="Pesquisa"
+                        id="searchBar"
+                    />
+                    <button id="search">
+                        <img src="./images/Search.png" alt="" />
+                    </button>
+                </div>
+                <div id="options">
+                    <h2 id="trabalhos">Trabalhos</h2>
+                    <select name="filtro" id="filtro">
+                        <option value="default">Organizar por:</option>
+                        <option value="disciplinas">Disciplinas</option>
+                        <option value="estado">Estado</option>
+                    </select>
+                </div>
+                <div id="tasks"></div>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="./cadeiras.html"
+                ><img src="./images/disciplinas.png" alt=""
+            /></a>
+            <a href="./mainPage.html" class="active"
+                ><img class="principalIcon" src="./images/home.png" alt=""
+            /></a>
+            <a href="#contact"><img src="./images/calendario.png" alt="" /></a>
+        </div>
+
+        <button type="button" id="addTask">
+            <img src="./images/add.png" alt="Adicionar task" />
+        </button>
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <input id="completeTask" type="file" />
+                <div class="buttonsModal">
+                    <button id="closeModal">Cancelar</button>
+                    <button id="upload" type="submit">Guardar</button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./assets/js/mainPageOrganizer.js"></script>
+    </body>
+</html>
