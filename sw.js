@@ -7,4 +7,6 @@ self.addEventListener('activate', function (e) {
     return self.clients.claim()
 })
 
-// This variable will save the event for later use.
+caches.open('pwa-assets').then(cache => {
+    cache.addAll(['./assets/css/offline.css', 'offline.html'])
+})
