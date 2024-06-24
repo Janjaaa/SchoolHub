@@ -312,3 +312,45 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+@media (min-width: 1200px) {
+    .navbar {
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 160px;
+        flex-direction: column;
+    }
+
+    .topbar {
+        width: 80%;
+        flex-direction: row;
+        position: relative;
+        left: 160px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #tasks {
+        margin-top: 50px;
+
+        display: grid;
+
+        grid-template-columns: 350px 350px 350px;
+    }
+    #conteudo {
+        width: 80%;
+        margin-left: 160px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #searchTab {
+        width: 45%;
+    }
+    #options {
+        margin-left: 24px;
+        margin-top: 16px;
+        width: 45%;
+        justify-content: baseline;
+        align-items: center;
+    }
+}

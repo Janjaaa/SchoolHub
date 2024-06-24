@@ -8,21 +8,7 @@ import {
     getFirestore,
     doc,
     setDoc,
-    collection,
-    addDoc,
     getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
-    query,
-    limit,
-    where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
-    getDocs,
     deleteDoc
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
 
@@ -46,14 +32,8 @@ const db = getFirestore(app)
 // AUTHENTICATION
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     onAuthStateChanged,
     GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo,
     signOut,
     deleteUser
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
@@ -101,7 +81,6 @@ onAuthStateChanged(auth, user => {
     async function getUserInfo() {
         const docRef = doc(db, 'users', user.uid)
         const userInfo = await getDoc(docRef)
-        console.log(userInfo.data())
         let name = document.getElementById('fname')
         name.innerHTML = userInfo.data().nome
 
@@ -207,7 +186,6 @@ onAuthStateChanged(auth, user => {
         const user = auth.currentUser
         const profilePicture = document.getElementById('profilePicture')
         const file = profilePicture.files[0]
-        console.log(user.uid)
 
         Object.defineProperty(file, 'name', {
             writable: true,

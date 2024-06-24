@@ -74,3 +74,17 @@ input:focus {
     height: 52px;
     border-radius: 50%;
 }
+
+@media (min-width: 1200px) {
+    .topbar {
+        width: 80%;
+        flex-direction: row;
+        position: relative;
+        left: 160px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .inputWrapper {
+        width: 100%;
+    }
+}

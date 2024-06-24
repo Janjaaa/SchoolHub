@@ -9,21 +9,8 @@ import {
     doc,
     setDoc,
     collection,
-    addDoc,
     getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
-    query,
-    limit,
-    where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
-    getDocs,
-    deleteDoc
+    getDocs
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -46,16 +33,8 @@ const db = getFirestore(app)
 // AUTHENTICATION
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo,
-    signOut,
-    deleteUser
+    GoogleAuthProvider
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
 
 // Initialize Firebase Authentication and get a reference to the service
@@ -69,11 +48,7 @@ auth.useDeviceLanguage()
 
 // STORAGE
 
-import {
-    getStorage,
-    ref,
-    uploadBytesResumable
-} from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js'
+import { getStorage } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js'
 const firebaseApp = getApp()
 const storage = getStorage(
     firebaseApp,
@@ -158,8 +133,6 @@ onAuthStateChanged(auth, user => {
                 cadeira.setAttribute('class', 'nomeCadeira')
                 cadeira.innerHTML = disciplina.data().abreviacao
                 uniqueCadeira.appendChild(cadeira)
-
-                console.log(disciplina.data())
             })
         })
     }

@@ -9,19 +9,9 @@ import {
     doc,
     setDoc,
     collection,
-    addDoc,
     getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
     query,
-    limit,
     where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
     getDocs,
     deleteDoc
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
@@ -46,16 +36,8 @@ const db = getFirestore(app)
 // AUTHENTICATION
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo,
-    signOut,
-    deleteUser
+    GoogleAuthProvider
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
 
 // Initialize Firebase Authentication and get a reference to the service
@@ -69,11 +51,7 @@ auth.useDeviceLanguage()
 
 // STORAGE
 
-import {
-    getStorage,
-    ref,
-    uploadBytesResumable
-} from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js'
+import { getStorage } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js'
 const firebaseApp = getApp()
 const storage = getStorage(
     firebaseApp,
@@ -150,7 +128,7 @@ onAuthStateChanged(auth, user => {
                     estado.setAttribute('class', 'entregue')
 
                     uniqueTask.appendChild(estado)
-                    console.log(user.data())
+
                     function delTask() {
                         deleteDoc(doc(db, 'users', user.id))
                         setTimeout(function () {
@@ -264,8 +242,6 @@ onAuthStateChanged(auth, user => {
                             { merge: true }
                         )
 
-                        console.log('no file')
-
                         modal.style.display = 'none'
                         setTimeout(function () {
                             window.location.reload()
@@ -295,7 +271,6 @@ onAuthStateChanged(auth, user => {
             .then(querySnapshot => {
                 if (querySnapshot.docs.length > 0) {
                     querySnapshot.forEach(doc => {
-                        console.log(doc.data())
                         let tasks = document.getElementById('tasks')
                         tasks.innerHTML = ''
                         let uniqueTask = document.createElement('div')

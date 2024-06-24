@@ -245,3 +245,31 @@ input:focus {
     position: absolute;
     left: 0px;
 }
+
+@media (min-width: 1200px) {
+    .navbar {
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 160px;
+        flex-direction: column;
+    }
+
+    #topbar {
+        width: 80%;
+        flex-direction: row;
+        position: relative;
+        left: 160px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #cadeiras {
+        margin-top: 50px;
+        margin-left: 160px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        grid-template-columns: 350px 350px 350px;
+    }
+}

@@ -118,3 +118,21 @@ input:focus {
     font-weight: 400;
     line-height: normal;
 }
+@media (min-width: 1200px) {
+    .topbar {
+        width: 80%;
+        flex-direction: row;
+        position: relative;
+        left: 160px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .registro {
+        margin-left: 550px;
+        margin-top: 28px;
+    }
+    .buttonsSendCancel {
+        width: 80%;
+        margin-left: 10%;
+    }
+}

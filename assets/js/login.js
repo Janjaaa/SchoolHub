@@ -4,23 +4,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/fireba
 import {
     getFirestore,
     doc,
-    setDoc,
-    collection,
-    addDoc,
-    getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
-    query,
-    limit,
-    where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
-    getDocs,
-    deleteDoc
+    setDoc
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -45,11 +29,8 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    onAuthStateChanged,
     GoogleAuthProvider,
     signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
     getAdditionalUserInfo
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
 
@@ -126,7 +107,6 @@ signUp.addEventListener('click', function (e) {
         .then(userCredential => {
             // Signed up
             const user = userCredential.user
-            console.log(user)
 
             setDoc(doc(db, 'users', user.uid), {
                 nome: document.getElementById('fname').value,
@@ -138,13 +118,55 @@ signUp.addEventListener('click', function (e) {
             })
             let userRef = doc(db, 'users', user.uid)
 
-            alert('Sucesso!')
+            let modal = document.getElementById('myModal')
+            modal.style.display = 'block'
+            let registerStatus = document.getElementById('status')
+            registerStatus.innerHTML = 'Sucesso!'
+
+            const span = document.getElementsByClassName('close')[0]
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = 'none'
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none'
+                }
+            }
+            let concluir = document.getElementById('upload')
+            concluir.addEventListener('click', function () {
+                modal.style.display = 'none'
+            })
+
             // ...
         })
         .catch(error => {
             const errorCode = error.code
             const errorMessage = error.message
-            alert(`${errorCode} = > ${errorMessage}`)
+            let modal = document.getElementById('myModal')
+            modal.style.display = 'block'
+            let registerStatus = document.getElementById('status')
+            registerStatus.innerHTML = `${errorCode} = > ${errorMessage}`
+
+            const span = document.getElementsByClassName('close')[0]
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = 'none'
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none'
+                }
+            }
+            let concluir = document.getElementById('upload')
+            concluir.addEventListener('click', function () {
+                modal.style.display = 'none'
+            })
+
             // ..
         })
 })
@@ -161,6 +183,7 @@ login.addEventListener('click', function (e) {
         .then(userCredential => {
             // Signed in
             const user = userCredential.user
+
             location.replace('/mainPage.html')
 
             // ...
@@ -169,6 +192,27 @@ login.addEventListener('click', function (e) {
         .catch(error => {
             const errorCode = error.code
             const errorMessage = error.message
+            let modal = document.getElementById('myModal')
+            modal.style.display = 'block'
+            let registerStatus = document.getElementById('status')
+            registerStatus.innerHTML = `${errorCode} = > ${errorMessage}`
+
+            const span = document.getElementsByClassName('close')[0]
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = 'none'
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none'
+                }
+            }
+            let concluir = document.getElementById('upload')
+            concluir.addEventListener('click', function () {
+                modal.style.display = 'none'
+            })
         })
 })
 
@@ -198,7 +242,6 @@ googleSignup.addEventListener('click', function (e) {
                     location.replace('/googleCompleteInfo.html')
                 }, 1000)
             } else {
-                console.log('Usuário já existe!')
                 setTimeout(function () {
                     const loginUser = document.getElementById('loginUser')
                     loginUser.style.visibility = 'hidden'
@@ -208,8 +251,6 @@ googleSignup.addEventListener('click', function (e) {
                     registraUser.style.visibility = 'visible'
                 }, 5)
             }
-
-            console.log(user)
 
             // IdP data available using getAdditionalUserInfo(result)
 

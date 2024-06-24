@@ -7,23 +7,9 @@ import {
 import {
     getFirestore,
     doc,
-    setDoc,
     collection,
-    addDoc,
     getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
-    query,
-    limit,
-    where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
-    getDocs,
-    deleteDoc
+    getDocs
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -46,16 +32,8 @@ const db = getFirestore(app)
 // AUTHENTICATION
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo,
-    signOut,
-    deleteUser
+    GoogleAuthProvider
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
 
 // Initialize Firebase Authentication and get a reference to the service
@@ -116,6 +94,25 @@ onAuthStateChanged(auth, user => {
                 right: 'next'
             }
         })
+        const small = window.matchMedia('(min-width: 1200px)').matches
+        if (small) {
+            calendarEl.innerHTML = ''
+            const calendar = new Calendar(calendarEl, {
+                plugins: [dayGridPlugin, timeGridPlugin],
+                themeSystem: 'minty',
+
+                locale: 'pt',
+                headerToolbar: {
+                    left: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                footerToolbar: {
+                    left: 'prev',
+                    center: 'today',
+                    right: 'next'
+                }
+            })
+        }
         calendar.render()
         const docRef = doc(db, 'users', user.uid)
 

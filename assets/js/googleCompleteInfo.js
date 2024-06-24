@@ -5,22 +5,7 @@ import {
     getFirestore,
     doc,
     setDoc,
-    collection,
-    addDoc,
-    getDoc,
-    updateDoc,
-    serverTimestamp,
-    increment,
-    getDocFromCache,
-    collectionGroup,
-    query,
-    limit,
-    where,
-    arrayUnion,
-    arrayRemove,
-    Timestamp,
-    getDocs,
-    deleteDoc
+    getDoc
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -43,14 +28,8 @@ const db = getFirestore(app)
 // AUTHENTICATION
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo
+    GoogleAuthProvider
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js'
 
 // Initialize Firebase Authentication and get a reference to the service
